@@ -51,3 +51,24 @@ openvpn              PoweredOn  2        2.000
 Homecall             PoweredOn  1        1.000
 
 ```
+
+* Filter `get-vm` with `Name` and `CPU` info.  
+```
+PS /home/netops> Get-VM | select Name,NumCpu
+
+Name            NumCpu
+----            ------
+Gitlab               1
+Rhel7-6              1
+Prox2                4
+pbolt                2
+gitbucket            2
+gitlab-server        2
+openvpn              2
+Win7-Enterprise      1
+Etherpad             1
+Homecall             1
+WebIOL-0.72          1
+
+
+```
