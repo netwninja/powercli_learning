@@ -4,7 +4,6 @@
 
 ```
 PS /home/netops> cat ./test2.ps1
-#try{your_command *>&1}catch{$_}
 $out = try
 {
   get-vm -Name penvpn -ErrorAction Stop
@@ -15,7 +14,6 @@ catch
 {
   $_
 }
-
 echo $out
 ```
 
