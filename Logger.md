@@ -21,6 +21,9 @@ echo $out
 
 #### Error Logging Example
 
+
+![](docs/redirection_codes.png)
+
 ```
 ./test2.ps1 5>&1 4>&1 3>&1 2>&1 | Out-file log.txt
 
