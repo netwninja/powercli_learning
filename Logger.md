@@ -3,7 +3,6 @@
 #### SAMPLE Script
 
 ```
-PS /home/netops> cat ./test2.ps1
 $out = try
 {
   get-vm -Name penvpn -ErrorAction Stop
@@ -11,9 +10,8 @@ $out = try
   get-vm -Name openvpn
 }
 catch
-{
-  $_
-}
+{ $_.Exception.Message }
+
 echo $out
 ```
 
