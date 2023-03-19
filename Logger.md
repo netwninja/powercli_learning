@@ -26,12 +26,6 @@ echo $out
 ```
 
 ```
-PS /home/netops> cat ./log.txt
-
-Get-VM: /home/netops/test2.ps1:4
-Line |
-   4 |    get-vm -Name penvpn -ErrorAction Stop
-     |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     | 03/19/2023 09:52:04 Get-VM  VM with name 'penvpn' was not found using the specified filter(s).
-
+PS /home/netops> cat ./log
+03/19/2023 11:13:01	Get-VM		VM with name 'penvpn' was not found using the specified filter(s).
 ```
