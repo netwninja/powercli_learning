@@ -45,24 +45,27 @@ Homecall             PoweredOn  1        1.000
 Web-0.72             PoweredOff 1        4.000
 
 ```
+#### Error Catch and Log Print
 
 ```
-./test2.ps1
+PS /home/netops> ./test2.ps1
+Type VM Name: openvm
 Getting VM Inventory from ESXi host
-Write-Error: 03/21/2023 21:11:10	Get-VM		VM with name 'penvpn' was not found using the specified filter(s).
+
+Write-Error: 03/21/2023 22:13:03	Get-VM		VM with name 'openvm' was not found using the specified filter(s).
 
 MyCommand             : Get-VM
 BoundParameters       : {}
 UnboundArguments      : {}
-ScriptLineNumber      : 7
+ScriptLineNumber      : 6
 OffsetInLine          : 3
-HistoryId             : 97
+HistoryId             : 3
 ScriptName            : /home/netops/test2.ps1
-Line                  :   get-vm -Name penvpn -ErrorAction Stop
+Line                  :   get-vm -Name $vm_name -ErrorAction Stop
 
-PositionMessage       : At /home/netops/test2.ps1:7 char:3
-                        +   get-vm -Name penvpn -ErrorAction Stop
-                        +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PositionMessage       : At /home/netops/test2.ps1:6 char:3
+                        +   get-vm -Name $vm_name -ErrorAction Stop
+                        +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 PSScriptRoot          : /home/netops
 PSCommandPath         : /home/netops/test2.ps1
 InvocationName        : get-vm
