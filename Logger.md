@@ -25,6 +25,27 @@ echo $info
 
 ![](docs/redirection_codes.png)
 
+### SAMPLE GET-VM OUTPUT
+
+```
+PS /home/netops/powershell> get-VM
+
+Name                 PowerState Num CPUs MemoryGB
+----                 ---------- -------- --------
+Gitlab               PoweredOff 1        4.000
+Rhel7-6              PoweredOff 1        4.000
+Prox2                PoweredOn  4        12.000
+pbolt                PoweredOff 2        2.000
+gitbucket            PoweredOn  2        2.000
+gitlab-server        PoweredOff 2        4.000
+openvpn              PoweredOn  2        2.000
+Win7-Enterprise      PoweredOff 1        1.000
+Etherpad             PoweredOn  1        3.000
+Homecall             PoweredOn  1        1.000
+Web-0.72             PoweredOff 1        4.000
+
+```
+
 ```
 ./test2.ps1
 Getting VM Inventory from ESXi host
