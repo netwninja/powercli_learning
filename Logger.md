@@ -7,10 +7,12 @@ $out = try
 {
   get-vm -Name penvpn -ErrorAction Stop
   #get-vm -Name penvpn
-  get-vm -Name openvpn
 }
 catch
-{ $_.Exception.Message }
+{
+  write-error $_.Exception.Message
+  $_ |select -expandproperty invocationinfo
+}
 
 echo $out
 ```
