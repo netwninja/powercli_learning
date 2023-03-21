@@ -3,11 +3,13 @@
 #### SAMPLE Script
 
 ```
-$out = try
+$vm_name = Read-Host -Prompt 'Type VM Name'
+$info = try
 {
   write-host -ForegroundColor Yellow "Getting VM Inventory from ESXi host"
-  get-vm -Name penvpn -ErrorAction Stop
-  get-vm -Name Openvm
+  write-host " "
+  get-vm -Name $vm_name -ErrorAction Stop
+  #get-vm -Name penvpn
 }
 catch
 {
@@ -15,7 +17,7 @@ catch
   $_ |select -expandproperty invocationinfo
 }
 
-echo $out
+echo $info
 ```
 
 #### Error Logging Example
